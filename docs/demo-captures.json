@@ -1,0 +1,20 @@
+[
+  {
+    "title": "What needs attention",
+    "ask": "Which services need a certificate review now?",
+    "command": "npm run certificates -- attention",
+    "output": "  code      service   owner  health       not_after               \n  --------  --------  -----  -----------  ------------------------\n  LEGACY    INTERNAL         expired      2026-10-25T22:43:29.875Z\n  PORTAL-A  PORTAL    Mere   verified     2026-11-07T22:43:29.875Z\n  PORTAL-B  PORTAL    Mere   stale-check  2026-11-07T22:43:29.875Z"
+  },
+  {
+    "title": "Renewal handover",
+    "ask": "Which renewal is overdue and how many instances have been checked?",
+    "command": "npm run certificates -- renewals-due",
+    "output": "  code       common_name          owner  due_on      status   target_count  verified_count\n  ---------  -------------------  -----  ----------  -------  ------------  --------------\n  ROTATE-01  portal.example.test  Mere   2026-10-27  planned  2             0"
+  },
+  {
+    "title": "Owner workload",
+    "ask": "Who owns the endpoints that need attention?",
+    "command": "npm run certificates -- owner-load",
+    "output": "  owner       endpoints  needing_check  expiring\n  ----------  ---------  -------------  --------\n  Mere        2          1              2       \n  UNASSIGNED  1          1              1"
+  }
+]

@@ -1,13 +1,40 @@
 [
   {
     "name": "week",
-    "title": "This week",
-    "subtitle": "Certificate Operations for Claude Code: what needs attention, rendered by npm run view",
+    "title": "Certificate operations this week",
     "sections": [
       {
-        "title": "Needs attention",
-        "note": "TODO(author): point this at the industry's attention view (overdue, stuck, quiet).",
-        "sql": "select 'replace me' as item, 'TODO(author)' as why"
+        "title": "Endpoint attention",
+        "sql": "select code,service,owner,health,not_after from endpoint_health where health<>'verified' or not_after<now()+interval '30 days' order by not_after"
+      },
+      {
+        "title": "Renewal work",
+        "sql": "select code,owner,due_on,status,target_count,verified_count from renewal_progress order by due_on"
+      }
+    ]
+  },
+  {
+    "name": "ownership",
+    "title": "Ownership and observations",
+    "sections": [
+      {
+        "title": "Service owners",
+        "sql": "select code,name,owner,backup_owner,review_on from services order by code"
+      },
+      {
+        "title": "Stale observations",
+        "sql": "select code,name,observed_at from endpoints where observed_at<now()-interval '14 days'"
+      }
+    ]
+  },
+  {
+    "name": "compliance",
+    "title": "Certificate record checks",
+    "sections": [
+      {
+        "title": "Findings",
+        "note": "Record checks only. This is not a live scan or a certificate authority audit.",
+        "sql": "select * from compliance_findings order by rule,item"
       }
     ]
   }

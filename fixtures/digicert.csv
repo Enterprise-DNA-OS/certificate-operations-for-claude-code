@@ -1,0 +1,3 @@
+Common name,Serial number,Seat ID,Thumbprint (SHA256),Issuer,Valid from,Valid to,Team
+import.example.test,EE05,demo-seat-1,eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee,Demo issuer,2026-10-01T00:00:00Z,2027-03-01T00:00:00Z,"Operations, North"
+import.example.test,EE05,demo-seat-2,eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee,Demo issuer,2026-10-01T00:00:00Z,2027-03-01T00:00:00Z,"Operations, North"

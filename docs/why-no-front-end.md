@@ -1,24 +1,11 @@
-# Why there is no front end
+# Why the certificate desk has no application front end
 
-DigiCert Trust Lifecycle Manager is a database with a subscription. The tables underneath it are ordinary: a few entities, a few relationships, a handful of workflows you repeat every week. What you pay for is the layer on top that lets people who do not write SQL get at those tables. Screens, filters, dashboards, forms.
+The records are services, owners, certificate fingerprints, endpoint bindings, renewal approvals and verification evidence. The weekly job is to decide what needs attention and record the work completed by authorised operators. A database and commands handle that job directly.
 
-That layer used to be the whole product, because talking to a database was hard. It is not hard any more. Open this folder in Claude Code, describe what you want, and it writes the query, runs it, and explains the answer. Ask a question the dashboard never had a chart for and you still get an answer.
+npm run view produces read-only snapshots. npm run docs produces a service certificate register and a renewal handover with approval, rollback and endpoint evidence. Change brand.json for your business name, logo and colours. HTML files are private drafts and can be printed to PDF after review.
 
-## What you gain
+A full application offers live notifications, mobile workflows, access administration and shared interactive status. DigiCert also discovers assets, issues certificates and deploys them through integrations. This free build does none of those. Keep those tools while using this desk for ownership and evidence, or agree a custom integration with Enterprise DNA. No background monitoring runs here.
 
-- **Better answers.** A dashboard shows what the vendor decided to chart. Here you ask your own question, in your own words, and get it answered against your own data.
-- **No seats.** Everyone who needs to look can look. The bill does not grow with headcount.
-- **Your data in your Postgres.** Plain tables. Back them up, query them from anything, leave any time. There is no export step because there is nothing to leave.
-- **A process that matches you.** When your way of working changes, you add a command. You do not wait for a feature request to clear.
+Claude Code, Codex, OpenCode and Cursor use the same database and command library. /new-view adds a read-only report. /customise adds fields and rules through migrations and tests. Local storage supports one operator at a time. Shared use requires a secured PostgreSQL role, backups and an agreed access model.
 
-## What you give up
-
-- **A visual board.** Stages are a table you ask about, not cards you drag.
-- **A phone app.** It runs where Claude Code runs.
-- **A vendor help desk.** This is open source. Enterprise DNA supports the installed version for businesses that want someone to call.
-
-## Who this fits
-
-Small teams who already use Claude Code, or who would rather learn to ask than learn another interface. If your team needs a screen to look at all day, keep DigiCert Trust Lifecycle Manager. If you need the answers more than the screens, this is cheaper, faster and yours.
-
-Installed and run for you: https://enterprisedna.co/omni/instead-of/digicert-trust-lifecycle-manager
+Omni by Enterprise DNA installs, connects and operates your agreed system for one setup fee, then a retainer.

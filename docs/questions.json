@@ -1,0 +1,42 @@
+[
+  [
+    "Which customer-facing endpoints expire soon and lack a recent check?",
+    "attention"
+  ],
+  [
+    "Which approved renewal still has an unchecked instance?",
+    "deployment-gaps"
+  ],
+  [
+    "Which service has no backup owner?",
+    "services"
+  ],
+  [
+    "Which certificate observations are more than two weeks old?",
+    "stale-observations"
+  ],
+  [
+    "Who owns the most endpoints that need checking?",
+    "owner-load"
+  ],
+  [
+    "Which public certificates exceed the limit for their issue date?",
+    "compliance"
+  ],
+  [
+    "Which completed renewal has lost its supporting evidence status?",
+    "compliance"
+  ],
+  [
+    "Which later failed check superseded an earlier pass?",
+    "check-history"
+  ],
+  [
+    "Which issuers account for our expired active records?",
+    "issuer-summary"
+  ],
+  [
+    "Who changed a service owner and what was there before?",
+    "activity"
+  ]
+]

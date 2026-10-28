@@ -1,11 +1,36 @@
 [
   {
-    "name": "example",
-    "title": "TODO(author): the first document this industry must produce",
-    "for_each": "select gen_random_uuid() as id, 'Example' as name",
-    "file": "name",
+    "name": "renewal-handover",
+    "title": "Renewal handover",
+    "for_each": "select id,code from renewals",
+    "file": "code",
     "sections": [
-      { "title": "Details", "sql": "select 'replace me' as item, $1::text as record_id" }
+      {
+        "title": "Approval and rollback",
+        "layout": "record",
+        "sql": "select code,owner,due_on,status,rollback_plan,approved_by,approval_evidence from renewals where id=$1"
+      },
+      {
+        "title": "Endpoint evidence",
+        "sql": "select e.code,e.name,h.health,h.checked_at,h.evidence from renewal_targets t join endpoints e on e.id=t.endpoint_id join endpoint_health h on h.id=e.id where t.renewal_id=$1"
+      }
+    ]
+  },
+  {
+    "name": "service-certificate-register",
+    "title": "Service certificate register",
+    "for_each": "select id,code from services",
+    "file": "code",
+    "sections": [
+      {
+        "title": "Accountability",
+        "layout": "record",
+        "sql": "select code,name,owner,backup_owner,critical,review_on from services where id=$1"
+      },
+      {
+        "title": "Certificate bindings",
+        "sql": "select h.code,h.common_name,h.not_after,h.health,h.checked_at from endpoint_health h join endpoints e on e.id=h.id where e.service_id=$1"
+      }
     ]
   }
 ]

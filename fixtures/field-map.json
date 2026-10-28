@@ -1,0 +1,8 @@
+{
+  "fingerprint": "Digest",
+  "common_name": "Host",
+  "serial_number": "Serial",
+  "issuer": "Authority",
+  "not_before": "Start",
+  "not_after": "End"
+}
