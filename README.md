@@ -6,7 +6,7 @@ Know which certificate expires next, who owns the service and whether every inst
 |---|---|---|
 | Free, MIT. Install and run the demo. | Your service ownership, review rules, imports and documents. | Installed and operated through Omni by Enterprise DNA. One setup fee, then a retainer. |
 
-[Get your version built](https://enterprisedna.co/omni/book/?offer=replace-software&utm_source=github&utm_medium=readme&utm_campaign=digicert-trust-lifecycle-manager) · [Instead of DigiCert Trust Lifecycle Manager](https://enterprisedna.co/omni/instead-of/digicert-trust-lifecycle-manager)
+[Get your version built](https://enterprisedna.co/omni/book/?offer=replace-software&utm_source=github&utm_medium=readme&utm_campaign=digicert-trust-lifecycle-manager) · [Instead of DigiCert Trust Lifecycle Manager](https://enterprisedna.co/omni/instead-of/digicert-trust-lifecycle-manager?utm_source=github&utm_medium=readme&utm_campaign=digicert-trust-lifecycle-manager)
 
 ## Start with a working certificate review
 
